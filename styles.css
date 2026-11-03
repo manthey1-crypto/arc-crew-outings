@@ -1,0 +1,63 @@
+/* ===== ARC CREW THEME STYLES ===== */
+    :root{
+      --navy:#1a2744;
+      --navy-deep:#0f1929;
+      --gold:#f5a800;
+      --gold-soft:#ffd76a;
+      --panel:rgba(15,25,41,.92);
+      --line:rgba(245,168,0,.18);
+    }
+    html{scroll-behavior:smooth} button{min-height:44px} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+    body{
+      font-family:"Barlow",system-ui,sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(245,168,0,.08), transparent 28%),
+        linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+      color:#f8fafc;
+    }
+    h1,h2,h3,.display{
+      font-family:"Bebas Neue",sans-serif;
+      letter-spacing:.04em;
+    }
+    .condensed{font-family:"Barlow Condensed",sans-serif}
+    .glass{
+      background:linear-gradient(180deg, rgba(26,39,68,.96), rgba(15,25,41,.98));
+      border:1px solid rgba(245,168,0,.16);
+      box-shadow:0 24px 60px rgba(0,0,0,.28);
+    }
+    .gold-ring:focus-visible,.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+      outline:3px solid var(--gold);
+      outline-offset:2px;
+    }
+    .btn{
+      min-height:44px;
+      transition:transform .15s ease, background-color .15s ease, border-color .15s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .tab-active{background:var(--gold); color:#111827; border-color:var(--gold)}
+    .pill{border:1px solid rgba(245,168,0,.18); background:rgba(255,255,255,.03)}
+    .card{
+      border:1px solid rgba(245,168,0,.14);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    }
+    .muted{color:rgba(248,250,252,.78)}
+    .detail-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:.75rem 1rem;
+    }
+    @media (max-width:640px){ .detail-grid{grid-template-columns:1fr} }
+    .link-underline{
+      text-decoration-thickness:2px;
+      text-underline-offset:3px;
+    }
+  
+    .mobile-category-filter{display:none}
+    .filter-label{display:block;margin-bottom:6px;font-size:14px;font-weight:600;color:#dde2ee}
+    .mobile-category-filter select{width:100%;min-width:0;min-height:48px;border:1px solid rgba(245,168,0,.35);border-radius:14px;padding:12px 14px;background:#0f1929;color:#fff;font:inherit;font-size:16px;color-scheme:dark}
+    .mobile-category-filter select:focus-visible{outline:3px solid #f5a800;outline-offset:2px}
+    @media(max-width:639px){
+      .mobile-category-filter{display:block;width:100%;min-width:0}
+      .desktop-category-filters{display:none!important}
+      #searchInput,#archiveSearchInput{min-height:48px;font-size:16px}
+    }
